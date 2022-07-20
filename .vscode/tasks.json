@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "frontend",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "source": "react-script",
+                    "base": "$tsc",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": {
+                            "regexp": "yarn run"
+                        },
+                        "endsPattern": {
+                            "regexp": "Starting the development server..."
+                        }
+                    }
+                }
+            ],
+            "label": "yarn start - frontend",
+            "detail": "yarn start",
+            "dependsOn": [
+                "yarn start - shared"
+            ],
+            "presentation": {
+                "group": "app"
+            }
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "shared",
+            "label": "yarn start - shared",
+            "detail": "yarn start",
+            "isBackground": true,
+            "problemMatcher": {
+                "source": "esbuild",
+                "base": "$tsc",
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "\\[esbuild\\] start"
+                    },
+                    "endsPattern": {
+                        "regexp": "\\[esbuild\\] finish"
+                    }
+                }
+            },
+            "presentation": {
+                "group": "app"
+            }
+        }
+    ]
+}
