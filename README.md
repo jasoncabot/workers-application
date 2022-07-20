@@ -1,4 +1,4 @@
-# Workers Application
+# Create single page React application backed by Cloudflare workers
 
 * React Frontend deployed to Cloudflare Pages
 * Backend deployed to Cloudflare Workers
@@ -8,9 +8,22 @@
 * Live reloading for frontend and backend
 * Environment variable and secret support
 
-# Backend
+# How to use
 
-## Dev
+* Use template to create your own repository
+* Sign up for [Cloudflare](http://cloudflare.com/sign-up)
+* Create an [API Token](https://developers.cloudflare.com/api/tokens/create/)
+* Create a GitHub Secret called `CLOUDFLARE_API_TOKEN` with this value
+* Create a GitHub Secret called `CLOUDFLARE_ACCOUNT_ID` with your Cloudflare account id
+* Update the name of your application in [wrangler.toml](/backend/wrangler.toml)
+
+# Details
+
+## Backend
+
+Typescript backend deployed to [Cloudflare Workers](https://workers.cloudflare.com)
+
+### Dev
 
 Runs locally with live reloading
 
@@ -20,7 +33,7 @@ yarn
 yarn dev
 ```
 
-## Test
+### Test
 
 ```bash
 cd backend
@@ -28,7 +41,7 @@ yarn
 yarn test
 ```
 
-## Prod
+### Prod
 
 Produces a `backend/dist/` containing assets to be deployed
 
@@ -38,9 +51,11 @@ yarn
 yarn build
 ```
 
-# Frontend
+## Frontend
 
-## Dev
+Single page application using React, deployed to [Cloudflare Pages](https://pages.cloudflare.com)
+
+### Dev
 
 Runs locally with live reloading
 
@@ -55,7 +70,7 @@ yarn link @app/shared # required for live reloading of shared module
 yarn start
 ```
 
-## Test
+### Test
 
 ```bash
 cd backend
@@ -63,7 +78,7 @@ yarn
 yarn test
 ```
 
-## Prod
+### Prod
 
 Produces a `frontend/dist/` containing assets to be deployed
 
