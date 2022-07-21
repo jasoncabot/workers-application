@@ -7,6 +7,7 @@
 * Testing for everything
 * Live reloading for frontend and backend
 * Environment variable and secret support
+* Continuous Deployment via GitHub Actions
 
 # How to use
 
