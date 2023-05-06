@@ -6,3 +6,8 @@ compatibility_flags = []
 
 [build]
 command = "node build.js"
+
+[miniflare]
+kv_persist = true
+cache_persist = true
+durable_objects_persist = true

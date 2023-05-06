@@ -11,6 +11,7 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -21,7 +22,8 @@
     "start": "BROWSER=none react-scripts start",
     "build": "BUILD_PATH='./dist' react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write"
   },
   "eslintConfig": {
     "extends": [

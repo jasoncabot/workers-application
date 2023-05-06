@@ -2,6 +2,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { build } from "esbuild";
 
+console.log("[esbuild] start");
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,7 +18,10 @@ try {
     entryPoints: [path.join(__dirname, "src", "index.ts")],
     outdir: path.join(__dirname, "dist"),
     outExtension: { ".js": ".mjs" },
+    loader: {},
   });
 } catch {
   process.exitCode = 1;
 }
+
+console.log("[esbuild] finish");

@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 import { greeter } from "@app/shared";
 
 function App() {
@@ -9,9 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {message}
-        </p>
+        <p>{message}</p>
       </header>
     </div>
   );

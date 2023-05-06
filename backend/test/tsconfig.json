@@ -4,6 +4,7 @@
     "types": [
       "@cloudflare/workers-types",
       "jest",
+      "jest-environment-miniflare/globals",
       "../bindings"
     ],
   },
